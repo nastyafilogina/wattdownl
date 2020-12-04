@@ -15,8 +15,8 @@ import os
 
 server = Flask(__name__)
 if __name__ == '__main__':
-#    server.debug = True
-    server.run(host="0.0.0.0", port=int(os.environ.get('PORT', 5000)))
+    server.debug = True
+
 
 chrome_options = webdriver.ChromeOptions()
 chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
@@ -69,7 +69,7 @@ print(fr)
 
 driver.quit()
 
-
+server.run(host="0.0.0.0", port=int(os.environ.get('PORT', 5000)))
 
 
 
