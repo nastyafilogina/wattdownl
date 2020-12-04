@@ -14,8 +14,7 @@ import os
 
 
 server = Flask(__name__)
-if __name__ == '__main__':
-    server.debug = True
+
 
 
 chrome_options = webdriver.ChromeOptions()
@@ -69,7 +68,9 @@ print(fr)
 
 driver.quit()
 
-server.run(host="0.0.0.0", port=int(os.environ.get('PORT', 5000)))
+if __name__ == '__main__':
+    server.debug = True
+    server.run(host="0.0.0.0", port=int(os.environ.get('PORT', 5000)))
 
 
 
