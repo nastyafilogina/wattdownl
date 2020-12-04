@@ -1,0 +1,4 @@
+selenium==3.141.0
+requests==2.25.0
+pypandoc==1.5
+pyTelegramBotAPI==3.7.4
