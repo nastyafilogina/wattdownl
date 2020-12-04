@@ -2,6 +2,9 @@ from selenium import webdriver
 import time
 import os
 
+server.debug = True
+server.run(host="0.0.0.0", port=int(os.environ.get('PORT', 5000)))
+
 chrome_options = webdriver.ChromeOptions()
 chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
 chrome_options.add_argument('--headless')
