@@ -1,22 +1,22 @@
 from selenium import webdriver
-#from flask import Flask, request
+from flask import Flask, request
 import time
 import os
-from flask import app
+#from flask import app
 #from intro_to_flask import app
 #from run import app as application
 
-if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port)
-
-
-
-
-#server = Flask(__name__)
 #if __name__ == '__main__':
+#    port = int(os.environ.get('PORT', 5000))
+#    app.run(host='0.0.0.0', port=port)
+
+
+
+
+server = Flask(__name__)
+if __name__ == '__main__':
 #    server.debug = True
-#    server.run(host="0.0.0.0", port=int(os.environ.get('PORT', 5000)))
+    server.run(host="0.0.0.0", port=int(os.environ.get('PORT', 5000)))
 
 chrome_options = webdriver.ChromeOptions()
 chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
